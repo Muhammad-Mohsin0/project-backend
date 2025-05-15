@@ -10,6 +10,8 @@ This series on backend with javaScript
 - Add prettier npm i -D prettier
 - Setup MongoDB and take URL from offical site
 - npm i mongoose express dotenv
-- Must used try-catch & async-await(Dhyan rakho) for conection to Database
 - Create the connection in db directory for Data base.
+- Must used try-catch & async-await(Dhyan rakho) for conection to Database
 - Used the dotenv in src/index.js file as "require('dotenv').config({path : "./env"})" but here i import that & add in package.json "dev":....
+- Remember app.use() used when middleware or configration setting needed.
+- npm i cookie-parser cors
