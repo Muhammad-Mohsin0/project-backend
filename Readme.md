@@ -18,3 +18,6 @@ This series on backend with javaScript
 - npm i mongoose-aggregate-paginate-v2      // use for aggregation pipline , // useplugin() hook
 - npm i jsonwebtoken   // create ACCESS_TOKEN...   And   //REFRESH_TOKEN in .env file
 - npm i bcrypt        // use in Pre() hook with //hash() and //campare()  
+- npm i cloudinary     // Uploads the file from your server to cloud
+- npm i multer   //Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
+- import fs from "fs"    // file system , for remove the locally saved temp file as the uplaod opration got fail
