@@ -22,7 +22,7 @@ import fs from "fs"
             return uploadResult
             
         } catch (error) {
-            fs.unlinkSync(localFilePath)  // remove the locally saved temp file as the uplaod opration got fail
+            fs.unlinkSync(localFilePath)  // remove the locally saved temp file as the uplaod opration  failed
             return null 
         }
     }
