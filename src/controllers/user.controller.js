@@ -1,4 +1,5 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
+import {ApiError} from "../utils/ApiError.js"
 
 const registerUser = asyncHandler( async(req, res) => {
    // get user details from frontend 
@@ -11,7 +12,18 @@ const registerUser = asyncHandler( async(req, res) => {
    // check for user creation 
    // return res
 
-  const {username, email, password, fullName} = req.body                       // data coming from in form and json then .body
+  const {username, email, password, fullName} = req.body                      // data coming from in form and json then .body
+  console.log("email: " ,email)
+  console.log("password: " ,password)
+
+  if( [fullName, username ,email, password].some ((field) => 
+   field?.trim() === "")){
+throw new ApiError(400, "All fields required")
+  }
+  if(!email.includes("@")){
+     throw new ApiError(400, "invalid email format")
+  }
 })
+
 
 export {registerUser}

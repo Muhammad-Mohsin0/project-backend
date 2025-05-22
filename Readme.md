@@ -22,4 +22,5 @@ This series on backend with javaScript
 - npm i multer   //Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
 - import fs from "fs"    // file system , for remove the locally saved temp file as the uplaod opration got fail.
 - HTTP (Hyper Text Transfer Protocol) 
-- Create Controllers , Routes and in app.js set routes import etc  
+- Create Controllers , Routes and in app.js set routes import etc
+- In user.controller.js write code for user details, validation and other more written in comments... 
