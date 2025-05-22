@@ -19,6 +19,7 @@ import fs from "fs"
             // file is uploaded is successfully
 
             console.log("file is uploaded successfully", uploadResult.url);
+            
             return uploadResult
             
         } catch (error) {
