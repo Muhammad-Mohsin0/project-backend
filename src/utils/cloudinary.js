@@ -18,7 +18,11 @@ import fs from "fs"
            })
             // file is uploaded is successfully
 
-            console.log("file is uploaded successfully", uploadResult.url);
+            // console.log("file is uploaded successfully", uploadResult.url);
+            // console.log(uploadResult);
+            
+
+            fs.unlinkSync(localFilePath)
             
             return uploadResult
             

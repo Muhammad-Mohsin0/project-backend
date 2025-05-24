@@ -24,3 +24,5 @@ This series on backend with javaScript
 - HTTP (Hyper Text Transfer Protocol) 
 - Create Controllers , Routes and in app.js set routes import etc
 - In user.controller.js write code for user details, validation and other more written in comments... 
+- Send data in database and cloudinary using postman to POST method. 
+- Create New Collection and Enviroment Variables(server) add in newcollection "{{server}}/users/register" to maintain the Api
