@@ -26,3 +26,4 @@ This series on backend with javaScript
 - In user.controller.js write code for user details, validation and other more written in comments... 
 - Send data in database and cloudinary using postman to POST method. 
 - Create New Collection and Enviroment Variables(server) add in newcollection "{{server}}/users/register" to maintain the Api
+- Create login controller and perform the algo. written in comments, also create token functionality
