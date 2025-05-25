@@ -3,8 +3,7 @@ import {ApiError} from "../utils/ApiError.js"
 import { User } from "../models/user.model.js"
 import {uploadOnCloudinary} from "../utils/cloudinary.js"
 import { ApiResponse } from "../utils/ApiResponse.js";
-import { ref } from "process";
-import { log } from "console";
+
 
 const generateAccessTokenAndRefreshTokens = async (userId) =>{
   try {
@@ -117,13 +116,18 @@ const loginUser = asyncHandler(async (req, res) => {
       const {email, username, password} = req.body
 
       //
-      if (!username || !email) {
+      if (!username && !email) {
         throw new ApiError(400, "username and email is required")
       }
+      // Here is an alternative of above code based on logic discussed in video:
+    // if (!(username || email)) {
+    //     throw new ApiError(400, "username or email is required")
+        
+    // }
 
       //
       const user = await User.findOne({
-        $or: [{username, email}]
+        $or: [{username}, {email}]
       })
        
       if (!user) {
@@ -160,4 +164,35 @@ const loginUser = asyncHandler(async (req, res) => {
         )
       )
 })
-export {registerUser ,loginUser}
+
+const logoutUser = asyncHandler( async ( req, res ) => {
+  await User.findByIdAndUpdate(
+          req.user._id,
+          {
+            $set: {
+               refreshToken : undefined
+            }
+          },
+          {
+            new : true
+          }
+  )
+
+   const options = {
+        httpOnly : true,
+        status: true
+      }
+
+      return res
+      .status(200)
+      .cookie("accessToken", options)
+      .cookie("refreshToken",  options)
+      .json(
+        new ApiResponse(
+          200,
+          {},
+          "User Loged out Successfully"
+        )
+      )
+})
+export {registerUser , loginUser, logoutUser}

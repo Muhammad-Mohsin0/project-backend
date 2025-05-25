@@ -27,3 +27,4 @@ This series on backend with javaScript
 - Send data in database and cloudinary using postman to POST method. 
 - Create New Collection and Enviroment Variables(server) add in newcollection "{{server}}/users/register" to maintain the Api
 - Create login controller and perform the algo. written in comments, also create token functionality
+- Create logout controller and create auth.middleware.js for delete the token
