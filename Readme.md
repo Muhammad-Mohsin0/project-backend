@@ -29,3 +29,4 @@ This series on backend with javaScript
 - Create login controller and perform the algo. written in comments, also create token functionality
 - Create logout controller and create auth.middleware.js for delete the token
 - Create refreshAccessToken endpoint in usee.controller
+- Create subscription model & changeCurrentPassword in user.controller 
