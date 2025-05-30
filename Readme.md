@@ -30,4 +30,4 @@ This series on backend with javaScript
 - Create logout controller and create auth.middleware.js for delete the token
 - Create refreshAccessToken endpoint in usee.controller
 - Create subscription model & changeCurrentPassword in user.controller 
-- Create aggregation, pipelines $lookup, $match ...
+- Create aggregation, pipelines $lookup, $match ... , also for watchHistory & owner
